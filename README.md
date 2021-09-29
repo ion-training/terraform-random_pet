@@ -2,7 +2,7 @@
 
 Terraform works with resources and an easy way to label them is to use random_pet to generate the names.
 
-Official documentation: [LINK](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
+Provider documentation: [LINK](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 
 # Example: 
 No arguments are needed by default:
