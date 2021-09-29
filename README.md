@@ -1,4 +1,4 @@
-# terraform-random_pet
+# random_pet
 
 Terraform works with resources and an easy way to label them is to use random_pet to generate the names.
 
