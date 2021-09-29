@@ -4,7 +4,7 @@ Terraform works with resources and an easy way to label them is to use random_pe
 
 Official documentation: [LINK](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 
-#Example:
+# Example: 
 No arguments are needed by default:
 ```
 resource "random_pet" "cat" {
