@@ -21,6 +21,7 @@ resource "random_pet" "dog" {
 ```
 
 # Sample Output
+Init, plan, apply on main.tf [LINK](https://github.com/ion-training/terraform-random_pet/blob/main/main.tf)
 ```
 $ terraform init
 
