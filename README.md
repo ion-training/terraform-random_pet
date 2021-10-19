@@ -10,6 +10,7 @@ Download the repository
 ```
 git clone https://github.com/ion-training/terraform-random_pet.git
 ```
+
 Change directory into the newly downloaded repo
 ```
 cd terraform-random_pet
@@ -19,11 +20,12 @@ Initialize the terraform workspace, terraform core will download the module rand
 ```
 terraform init
 ```
+
 Check the plan terraform prepared for applying the changes
 ```
 terraform plan
 ```
-
+Apply the changes (create the resources, the random names)
 ```
 terraform apply
 ```
@@ -32,10 +34,6 @@ To destroy the resources used, use destroy option
 ```
 terraform destroy
 ```
-
-Apply the changes
-
-
 
 # Example: 
 No arguments are needed by default:
