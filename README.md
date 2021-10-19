@@ -1,8 +1,41 @@
 # random_pet
 
-Terraform works with resources and an easy way to label them is to use random_pet to generate the names.
+Terraform works with resources. \
+Resources names can be easily generated with the random_pet provider.
 
 Provider documentation: [LINK](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
+
+# How to use this code:
+Download the repository
+```
+git clone https://github.com/ion-training/terraform-random_pet.git
+```
+Change directory into the newly downloaded repo
+```
+cd terraform-random_pet
+
+Initialize the terraform workspace, terraform core will download the module random
+```
+terraform init
+```
+Check the plan terraform prepared for applying the changes
+```
+terraform plan
+```
+
+Apply the changes
+```
+terraform apply
+```
+
+To destroy the resources used, use destroy option
+```
+terraform destroy
+```
+
+Apply the changes
+
+
 
 # Example: 
 No arguments are needed by default:
@@ -67,10 +100,9 @@ Terraform will perform the following actions:
 
 Plan: 1 to add, 0 to change, 0 to destroy.
 
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply"
-now.
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 $
 ```
 
@@ -99,8 +131,40 @@ Do you want to perform these actions?
   Enter a value: yes
 
 random_pet.dog: Creating...
-random_pet.dog: Creation complete after 0s [id=Mr_useful_boxer]
+random_pet.dog: Creation complete after 0s [id=Mr_healthy_shad]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 $
+```
+
+Destroying the resources generated
+```
+terraform destroy
+random_pet.dog: Refreshing state... [id=Mr_healthy_shad]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # random_pet.dog will be destroyed
+  - resource "random_pet" "dog" {
+      - id        = "Mr_healthy_shad" -> null
+      - length    = 2 -> null
+      - prefix    = "Mr" -> null
+      - separator = "_" -> null
+    }
+
+Plan: 0 to add, 0 to change, 1 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+random_pet.dog: Destroying... [id=Mr_healthy_shad]
+random_pet.dog: Destruction complete after 0s
+
+Destroy complete! Resources: 1 destroyed.
 ```
