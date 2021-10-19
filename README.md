@@ -13,6 +13,7 @@ git clone https://github.com/ion-training/terraform-random_pet.git
 Change directory into the newly downloaded repo
 ```
 cd terraform-random_pet
+```
 
 Initialize the terraform workspace, terraform core will download the module random
 ```
@@ -23,7 +24,6 @@ Check the plan terraform prepared for applying the changes
 terraform plan
 ```
 
-Apply the changes
 ```
 terraform apply
 ```
