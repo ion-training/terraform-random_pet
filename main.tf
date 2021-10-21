@@ -6,3 +6,7 @@ resource "random_pet" "dog" {
   # generate 2 strings (prefix taken into account) that will be conctacted by underscore
   length = 2
 }
+
+output "dog" {
+  value = random_pet.dog.id
+}
