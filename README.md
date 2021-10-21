@@ -1,7 +1,7 @@
 # random_pet
 
 Terraform works with resources. \
-Resources names can be easily generated with the random_pet provider.
+Resource names can be easily generated with the random_pet provider.
 
 Provider documentation: [LINK](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)
 
