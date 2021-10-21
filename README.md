@@ -98,7 +98,10 @@ Terraform will perform the following actions:
 
 Plan: 1 to add, 0 to change, 0 to destroy.
 
-─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Changes to Outputs:
+  + dog = (known after apply)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 $
@@ -122,6 +125,9 @@ Terraform will perform the following actions:
 
 Plan: 1 to add, 0 to change, 0 to destroy.
 
+Changes to Outputs:
+  + dog = (known after apply)
+
 Do you want to perform these actions?
   Terraform will perform the actions described above.
   Only 'yes' will be accepted to approve.
@@ -129,16 +135,20 @@ Do you want to perform these actions?
   Enter a value: yes
 
 random_pet.dog: Creating...
-random_pet.dog: Creation complete after 0s [id=Mr_healthy_shad]
+random_pet.dog: Creation complete after 0s [id=Mr_dear_stingray]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+dog = "Mr_dear_stingray"
 $
 ```
 
 Destroying the resources generated
 ```
-terraform destroy
-random_pet.dog: Refreshing state... [id=Mr_healthy_shad]
+$ terraform destroy
+andom_pet.dog: Refreshing state... [id=Mr_dear_stingray]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   - destroy
@@ -147,7 +157,7 @@ Terraform will perform the following actions:
 
   # random_pet.dog will be destroyed
   - resource "random_pet" "dog" {
-      - id        = "Mr_healthy_shad" -> null
+      - id        = "Mr_dear_stingray" -> null
       - length    = 2 -> null
       - prefix    = "Mr" -> null
       - separator = "_" -> null
@@ -155,14 +165,18 @@ Terraform will perform the following actions:
 
 Plan: 0 to add, 0 to change, 1 to destroy.
 
+Changes to Outputs:
+  - dog = "Mr_dear_stingray" -> null
+
 Do you really want to destroy all resources?
   Terraform will destroy all your managed infrastructure, as shown above.
   There is no undo. Only 'yes' will be accepted to confirm.
 
   Enter a value: yes
 
-random_pet.dog: Destroying... [id=Mr_healthy_shad]
+random_pet.dog: Destroying... [id=Mr_dear_stingray]
 random_pet.dog: Destruction complete after 0s
 
 Destroy complete! Resources: 1 destroyed.
+$
 ```
